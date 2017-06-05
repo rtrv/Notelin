@@ -9,7 +9,7 @@ import android.widget.Toast
 import com.afollestad.materialdialogs.MaterialDialog
 import com.arellomobile.mvp.presenter.InjectPresenter
 import ru.krivonozhko.artem.notelin.R
-import ru.krivonozhko.artem.notelin.mvp.common.MvpAppCompatActivity
+import com.arellomobile.mvp.MvpAppCompatActivity
 import ru.krivonozhko.artem.notelin.mvp.models.Note
 import ru.krivonozhko.artem.notelin.mvp.presenters.NotePresenter
 import ru.krivonozhko.artem.notelin.mvp.views.NoteView

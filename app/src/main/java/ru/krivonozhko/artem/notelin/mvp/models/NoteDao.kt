@@ -6,7 +6,7 @@ import java.util.*
 
 class NoteDao {
     fun createNote(): Note {
-        var note = Note("Новая заметка", Date(), Date())
+        var note = Note("Новая заметка", Date())
         note.save()
         return note
     }
@@ -15,12 +15,12 @@ class NoteDao {
 
     fun loadAllNotes() = Select().from(Note::class.java).execute<Note>()
 
-    fun getNoteById(noteId: Long) {
-        Select().from(Note::class.java).where("id = ?", noteId).executeSingle<Note>()
+    fun getNoteById(noteId: Long) : Note {
+        return Select().from(Note::class.java).where("id = ?", noteId).executeSingle<Note>()
     }
 
     fun deleteAllNotes() {
-        Delete().from(Note::class.java).execute<Note>();
+        Delete().from(Note::class.java).execute<Note>()
     }
 
     fun deleteNote(note: Note) {
